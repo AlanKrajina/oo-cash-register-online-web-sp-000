@@ -22,7 +22,7 @@ class CashRegister
   def apply_discount
 
     
-    self.transaction *= @discount
+    self.transaction = self.transaction @discount
   end
   
   
