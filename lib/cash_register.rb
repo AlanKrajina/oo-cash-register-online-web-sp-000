@@ -25,6 +25,8 @@ class CashRegister
     trans = self.total * @discount
     trans2 = trans / 100
     self.total -= trans2
+    
+    
   end
   
   
