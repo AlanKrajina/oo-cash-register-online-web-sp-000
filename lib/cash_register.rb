@@ -25,7 +25,7 @@ class CashRegister
     trans2 = trans / 100
     self.total -= trans2
     "After the discount, the total comes to $#{self.total}."
-      elsif @discount == 0
+      elsif @discount == nil
         "There is no discount to apply."
     end
   end
