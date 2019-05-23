@@ -25,7 +25,6 @@ class CashRegister
     trans = self.transaction * @discount
     trans2 = trans / 100
     self.transaction -= trans2
-    binding.pry
   end
   
   
