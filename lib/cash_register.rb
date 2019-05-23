@@ -18,7 +18,6 @@ class CashRegister
     self.transaction = price * quantity
   end
   
-  
   def apply_discount
     if @discount == 0
       "There is no discount to apply."
@@ -29,10 +28,6 @@ class CashRegister
       "After the discount, the total comes to $#{self.total}."
     end
   end
-  
-  
-  
-  
   
   def items
     @transactions
