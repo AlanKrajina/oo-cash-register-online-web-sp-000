@@ -46,31 +46,16 @@ end
     
 =begin
  
- describe '#apply_discount' do
-    context 'the cash register was initialized with an employee discount' do
-      it 'applies the discount to the total price' do
-        cash_register_with_discount.add_item("macbook air", 1000)
-        cash_register_with_discount.apply_discount
-        expect(cash_register_with_discount.total).to eq(800)
-      end
+  def add_item(item, price, quantity = 1)
+    item_info = {}
+    item_info[:name] = item
+    item_info[:price] = price
+    item_info[:quantity] = quantity
 
-      it 'returns success message with updated total' do
-        cash_register_with_discount.add_item("macbook air", 1000)
-        expect(cash_register_with_discount.apply_discount).to eq("After the discount, the total comes to $800.")
-      end
+    @cart << item_info
 
-      it 'reduces the total' do
-        cash_register.total = 0
-        cash_register_with_discount.add_item("macbook air", 1000)
-        expect{cash_register_with_discount.apply_discount}.to change{cash_register_with_discount.total}.by(-200)
-      end
-    end
+    @total += price * quantity
 
-    context 'the cash register was not initialized with an employee discount' do
-      it 'returns a string error message that there is no discount to apply' do
-        expect(cash_register.apply_discount).to eq("There is no discount to apply.")
-      end
-    end
   end
   
 =end
