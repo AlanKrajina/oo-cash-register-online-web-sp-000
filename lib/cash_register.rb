@@ -23,7 +23,7 @@ class CashRegister
 
     
     trans = self.transaction * @discount
-    self.transaction = trans / 100
+    trans2 = trans / 100
     binding.pry
   end
   
