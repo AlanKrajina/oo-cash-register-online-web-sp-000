@@ -22,9 +22,9 @@ class CashRegister
   def apply_discount
 
     
-    trans = self.transaction * @discount
+    trans = self.total * @discount
     trans2 = trans / 100
-    self.transaction -= trans2
+    self.total -= trans2
   end
   
   
